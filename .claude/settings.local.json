@@ -1,0 +1,14 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(aws eks describe-cluster *)",
+      "Bash(aws ec2 *)",
+      "Bash(aws eks *)",
+      "Bash(where javac *)",
+      "Read(//c/Program Files/Eclipse Adoptium/**)",
+      "Read(//c/Program Files/Java/**)",
+      "Read(//c/Program Files/Microsoft/**)",
+      "Bash(aws ecr *)"
+    ]
+  }
+}

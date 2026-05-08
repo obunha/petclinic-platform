@@ -56,7 +56,6 @@ locals {
     "arn:aws:iam::aws:policy/AmazonEKSWorkerNodePolicy",
     "arn:aws:iam::aws:policy/AmazonEKS_CNI_Policy",
     "arn:aws:iam::aws:policy/AmazonEC2ContainerRegistryReadOnly",
-    "arn:aws:iam::aws:policy/service-role/AmazonEBSCSIDriverPolicy",
   ]
 }
 
@@ -176,14 +175,3 @@ resource "aws_eks_addon" "kube_proxy" {
   }
 }
 
-resource "aws_eks_addon" "ebs_csi_driver" {
-  cluster_name             = aws_eks_cluster.this.name
-  addon_name               = "aws-ebs-csi-driver"
-  service_account_role_arn = aws_iam_role.node.arn
-
-  depends_on = [aws_eks_node_group.this]
-
-  tags = {
-    Environment = "production"
-  }
-}

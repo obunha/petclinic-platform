@@ -1,5 +1,5 @@
 image:
-  registry: 139561979448.dkr.ecr.us-east-1.amazonaws.com
+  registry: 013046901123.dkr.ecr.af-south-1.amazonaws.com
   tag: latest
 
 services:
